@@ -1,2 +1,1545 @@
-# Meet-Gala-2026
-Meet Gala 2026
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+
+  <title>Maison Editorial | The Art of Living Well</title>
+  <meta content="A luxury editorial destination for fashion, beauty, culture, and the art of living well." name="description"/>
+  <link href="/" rel="canonical"/>
+
+  <!-- Open Graph -->
+  <meta content="Maison Editorial" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Maison Editorial" property="og:title"/>
+
+  <!-- Twitter Cards -->
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Maison Editorial" name="twitter:site"/>
+
+  <!-- Preconnect -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Jost:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --ivory: #FFFFFF;
+      --cream: #F3EFE8;
+      --beige: #E8E0D4;
+      --warm-gray: #C8BFB5;
+      --mid-gray: #8C8480;
+      --charcoal: #3A3530;
+      --black: #1A1714;
+      --gold: #B8965A;
+      --gold-light: #D4AF72;
+      --white: #FFFFFF;
+      --ff-serif: 'Cormorant Garamond', Georgia, serif;
+      --ff-display: 'Playfair Display', Georgia, serif;
+      --ff-sans: 'Jost', system-ui, sans-serif;
+      --max-width: 1280px;
+      --content-width: 820px;
+      --gutter: 2rem;
+      --radius-sm: 2px;
+      --radius: 4px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+      --transition-fast: 0.18s ease;
+      --shadow-soft: 0 4px 32px rgba(26,23,20,0.07);
+      --shadow-card: 0 2px 16px rgba(26,23,20,0.09);
+    }
+    [data-theme="dark"] {
+      --ivory: #18160F;
+      --cream: #211E17;
+      --beige: #2C2820;
+      --warm-gray: #4A453E;
+      --mid-gray: #8C8480;
+      --charcoal: #D4CECC;
+      --black: #F0EBE6;
+      --white: #1A1714;
+      --shadow-soft: 0 4px 32px rgba(0,0,0,0.35);
+      --shadow-card: 0 2px 16px rgba(0,0,0,0.4);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: var(--ff-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      transition: background var(--transition), color var(--transition);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul, ol { list-style: none; }
+    button { border: none; background: none; cursor: pointer; font-family: inherit; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--gutter); }
+    .container--narrow { max-width: var(--content-width); margin: 0 auto; padding: 0 var(--gutter); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .gold-rule { display: block; width: 60px; height: 1px; background: var(--gold); margin: 1rem auto; }
+    .eyebrow {
+      font-family: var(--ff-sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .topbar {
+      background: var(--black);
+      color: var(--ivory);
+      font-family: var(--ff-sans);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px var(--gutter);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar a { color: var(--warm-gray); transition: color var(--transition-fast); }
+    .topbar a:hover { color: var(--gold); }
+    .topbar__social { display: flex; gap: 1rem; }
+    .topbar__date { color: var(--mid-gray); }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--ivory);
+      border-bottom: 1px solid var(--beige);
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+    .site-header.scrolled { box-shadow: var(--shadow-soft); }
+    .header-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 1.1rem var(--gutter);
+      gap: 1rem;
+    }
+    .header-logo { grid-column: 2; text-align: center; }
+    .header-logo a {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      line-height: 1;
+    }
+    .header-logo .logo-tagline {
+      display: block;
+      font-family: var(--ff-sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.28em;
+      font-weight: 400;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .header-left { display: flex; align-items: center; gap: 1.2rem; }
+    .header-right { display: flex; align-items: center; gap: 1.2rem; justify-content: flex-end; }
+    .btn-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      transition: background var(--transition-fast), color var(--transition-fast);
+      color: var(--charcoal);
+    }
+    .btn-icon:hover { background: var(--cream); color: var(--black); }
+    .btn-icon svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    .main-nav {
+      border-top: 1px solid var(--beige);
+      background: var(--ivory);
+    }
+    .nav-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      padding: 0 var(--gutter);
+    }
+    .nav-item { position: relative; }
+    .nav-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      font-family: var(--ff-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      transition: color var(--transition-fast);
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width var(--transition);
+    }
+    .nav-link:hover { color: var(--black); }
+    .nav-link:hover::after { width: calc(100% - 2.2rem); }
+    .nav-item:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mega-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-8px);
+      background: var(--white);
+      border: 1px solid var(--beige);
+      border-top: 2px solid var(--gold);
+      min-width: 200px;
+      padding: 1.2rem 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+      z-index: 300;
+      box-shadow: var(--shadow-card);
+    }
+    .mega-menu a {
+      display: block;
+      padding: 0.5rem 1.4rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+      color: var(--charcoal);
+      transition: color var(--transition-fast), padding-left var(--transition-fast);
+    }
+    .mega-menu a:hover { color: var(--gold); padding-left: 1.8rem; }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+      cursor: pointer;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--charcoal);
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(250,248,245,0.97);
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition), visibility var(--transition);
+    }
+    .search-overlay.active { opacity: 1; visibility: visible; }
+    .search-overlay form {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--charcoal);
+      width: min(600px, 90vw);
+      gap: 1rem;
+    }
+    .search-overlay input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      font-family: var(--ff-serif);
+      font-size: 1.8rem;
+      color: var(--black);
+      padding: 0.5rem 0;
+    }
+    .search-overlay input::placeholder { color: var(--warm-gray); }
+    .search-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 1.5rem;
+      color: var(--charcoal);
+      cursor: pointer;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 85vh;
+      border-bottom: 1px solid var(--beige);
+    }
+    .hero__feature {
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+    }
+    .hero__feature img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .hero__feature:hover img { transform: scale(1.03); }
+    .hero__feature-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,23,20,0.82));
+      padding: 3rem 2.5rem 2.5rem;
+      color: var(--white);
+    }
+    .hero__feature-overlay .eyebrow { color: var(--gold-light); margin-bottom: 0.8rem; }
+    .hero__feature-overlay h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero__feature-overlay p {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .hero__sidebar {
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid var(--beige);
+    }
+    .hero__secondary {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--beige);
+      background: var(--cream);
+    }
+    .hero__secondary img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .hero__secondary:hover img { transform: scale(1.03); }
+    .hero__secondary-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,23,20,0.75));
+      padding: 2rem 1.8rem 1.8rem;
+      color: var(--white);
+    }
+    .hero__secondary-overlay h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-weight: 400;
+      line-height: 1.3;
+    }
+    .btn-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--ff-sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      transition: gap var(--transition-fast);
+    }
+    .btn-read-more:hover { gap: 0.9rem; }
+    .btn-read-more::after { content: '→'; }
+    .section-head {
+      text-align: center;
+      padding: 3.5rem var(--gutter) 2rem;
+    }
+    .section-head h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400;
+      color: var(--black);
+      margin: 0.6rem 0;
+    }
+    .section-head p {
+      font-size: 0.9rem;
+      color: var(--mid-gray);
+      max-width: 480px;
+      margin: 0.6rem auto 0;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .card__img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--cream);
+    }
+    .card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+    .card:hover .card__img img { transform: scale(1.06); }
+    .card__body { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; gap: 0.6rem; }
+    .card__category {
+      font-family: var(--ff-sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .card__title {
+      font-family: var(--ff-serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.35;
+      color: var(--black);
+    }
+    .card__excerpt {
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      line-height: 1.65;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1;
+    }
+    .card__meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.7rem;
+      color: var(--warm-gray);
+      margin-top: 0.4rem;
+      letter-spacing: 0.04em;
+    }
+    .card__meta time { font-style: italic; font-family: var(--ff-serif); }
+    .editorial-strip {
+      padding: 3rem 0;
+      background: var(--black);
+      color: var(--ivory);
+      text-align: center;
+      position: relative;
+    }
+    .editorial-strip::before, .editorial-strip::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .editorial-strip::after { top: auto; bottom: 0; }
+    .editorial-strip blockquote {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      color: var(--ivory);
+    }
+    .editorial-strip cite {
+      display: block;
+      font-family: var(--ff-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 1.2rem;
+      font-style: normal;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5rem;
+      padding: 2rem 0 3rem;
+    }
+    .category-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+      text-align: center;
+    }
+    .category-card__img {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--beige);
+      transition: border-color var(--transition);
+      background: var(--cream);
+    }
+    .category-card__img img { width: 100%; height: 100%; object-fit: cover; }
+    .category-card:hover .category-card__img { border-color: var(--gold); }
+    .category-card__label {
+      font-family: var(--ff-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      transition: color var(--transition-fast);
+    }
+    .category-card:hover .category-card__label { color: var(--gold); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .site-content {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      padding: 3rem 0;
+      align-items: start;
+    }
+    .post-header {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .post-header .eyebrow { margin-bottom: 1rem; }
+    .post-title {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--black);
+      margin-bottom: 1.2rem;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--warm-gray);
+      border-top: 1px solid var(--beige);
+      border-bottom: 1px solid var(--beige);
+      padding: 0.9rem 0;
+      margin-top: 1.5rem;
+    }
+    .post-hero-img {
+      margin: 2rem 0;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      max-height: 560px;
+    }
+    .post-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+    .post-body {
+      font-family: var(--ff-serif);
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--charcoal);
+    }
+    .post-body p { margin-bottom: 1.5em; }
+    .post-body h2 {
+      font-family: var(--ff-display);
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin: 2em 0 0.8em;
+      color: var(--black);
+    }
+    .post-body blockquote {
+      border-left: 2px solid var(--gold);
+      padding: 0.5rem 0 0.5rem 1.8rem;
+      margin: 2em 0;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--black);
+    }
+    .post-body a { color: var(--gold); border-bottom: 1px solid var(--gold-light); }
+    .post-body a:hover { color: var(--black); }
+    .widget { margin-bottom: 2.5rem; }
+    .widget-title {
+      font-family: var(--ff-sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--beige);
+      margin-bottom: 1.2rem;
+      position: relative;
+    }
+    .widget-title::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 3px;
+      margin: 2rem 0 0;
+    }
+    .instagram-item {
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--cream);
+      cursor: pointer;
+    }
+    .instagram-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease, filter 0.5s ease; }
+    .instagram-item:hover img { transform: scale(1.1); filter: brightness(0.75); }
+    .instagram-item__overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition);
+      color: var(--white);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+    .instagram-item:hover .instagram-item__overlay { opacity: 1; }
+    .newsletter-section {
+      background: var(--cream);
+      border-top: 1px solid var(--beige);
+      border-bottom: 1px solid var(--beige);
+      padding: 5rem var(--gutter);
+      text-align: center;
+      margin: 3rem 0 0;
+    }
+    .newsletter-section h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400;
+      color: var(--black);
+      margin: 0.8rem 0;
+    }
+    .newsletter-section p {
+      color: var(--mid-gray);
+      font-size: 0.9rem;
+      max-width: 440px;
+      margin: 0.6rem auto 2rem;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      max-width: 480px;
+      margin: 0 auto;
+      border: 1px solid var(--charcoal);
+    }
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.9rem 1.2rem;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--ff-sans);
+      font-size: 0.85rem;
+      color: var(--black);
+    }
+    .newsletter-form input::placeholder { color: var(--warm-gray); }
+    .newsletter-form button {
+      padding: 0.9rem 1.8rem;
+      background: var(--black);
+      color: var(--ivory);
+      font-family: var(--ff-sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: background var(--transition-fast);
+    }
+    .newsletter-form button:hover { background: var(--charcoal); }
+    .site-footer {
+      background: var(--black);
+      color: var(--ivory);
+      padding: 4rem 0 0;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand .footer-logo {
+      font-family: var(--ff-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--ivory);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .footer-brand p {
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      line-height: 1.7;
+      max-width: 260px;
+      margin-bottom: 1.5rem;
+    }
+    .footer-social { display: flex; gap: 0.8rem; }
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+      color: var(--mid-gray);
+    }
+    .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-social svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    .footer-col h4 {
+      font-family: var(--ff-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ivory);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul a {
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      transition: color var(--transition-fast);
+    }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.7rem;
+      color: var(--mid-gray);
+      letter-spacing: 0.06em;
+    }
+    .footer-bottom a { color: var(--warm-gray); transition: color var(--transition-fast); }
+    .footer-bottom a:hover { color: var(--gold); }
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      background: var(--black);
+      color: var(--ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+      z-index: 100;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { background: var(--charcoal); }
+    .back-to-top svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+    .breadcrumb {
+      padding: 0.8rem 0;
+      font-size: 0.7rem;
+      color: var(--warm-gray);
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--beige);
+      margin-bottom: 2rem;
+    }
+    .breadcrumb a { color: var(--warm-gray); transition: color var(--transition-fast); }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 0.5rem; }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 2.5rem 0;
+    }
+    .pagination a, .pagination span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--beige);
+      font-size: 0.8rem;
+      color: var(--charcoal);
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .pagination a:hover { background: var(--black); color: var(--ivory); border-color: var(--black); }
+    .pagination .current { background: var(--black); color: var(--ivory); border-color: var(--black); }
+    .author-box {
+      display: flex;
+      gap: 1.5rem;
+      padding: 2rem;
+      background: var(--cream);
+      border-left: 2px solid var(--gold);
+      margin: 3rem 0;
+    }
+    .author-box__avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--beige);
+    }
+    .author-box__avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .author-box__name {
+      font-family: var(--ff-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .author-box__bio { font-size: 0.82rem; color: var(--mid-gray); line-height: 1.65; }
+    .share-buttons {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--beige);
+      border-bottom: 1px solid var(--beige);
+      margin: 2rem 0;
+    }
+    .share-buttons span {
+      font-family: var(--ff-sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-right: 0.5rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      border: 1px solid var(--beige);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--charcoal);
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .share-btn:hover { border-color: var(--charcoal); color: var(--black); }
+    .related-posts { margin: 3rem 0; }
+    .related-posts h3 {
+      font-family: var(--ff-sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--beige);
+      margin-bottom: 1.8rem;
+      position: relative;
+    }
+    .related-posts h3::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .comments-section { margin: 3rem 0; }
+    .comments-title {
+      font-family: var(--ff-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      color: var(--black);
+    }
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      background: var(--ivory);
+      z-index: 600;
+      transform: translateX(-100%);
+      transition: transform var(--transition);
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      border-right: 1px solid var(--beige);
+    }
+    .mobile-nav.open { transform: translateX(0); }
+    .mobile-nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26,23,20,0.5);
+      z-index: 599;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition), visibility var(--transition);
+    }
+    .mobile-nav-overlay.open { opacity: 1; visibility: visible; }
+    .mobile-nav-close {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1.5rem;
+    }
+    .mobile-nav-logo {
+      font-family: var(--ff-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--black);
+      display: block;
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--beige);
+    }
+    .mobile-nav ul { display: flex; flex-direction: column; gap: 0; }
+    .mobile-nav ul li a {
+      display: block;
+      padding: 0.9rem 0;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      border-bottom: 1px solid var(--beige);
+      transition: color var(--transition-fast), padding-left var(--transition-fast);
+    }
+    .mobile-nav ul li a:hover { color: var(--gold); padding-left: 0.5rem; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-in { animation: fadeIn 0.6s ease forwards; }
+    .post-outer { margin-bottom: 2.5rem; }
+    .post { background: var(--white); }
+    .entry-header { padding: 1.5rem 1.5rem 0; }
+    .entry-title {
+      font-family: var(--ff-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+    .entry-title a { color: inherit; transition: color var(--transition-fast); }
+    .entry-title a:hover { color: var(--gold); }
+    .entry-meta {
+      font-size: 0.72rem;
+      color: var(--warm-gray);
+      letter-spacing: 0.06em;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--beige);
+      margin-bottom: 0.8rem;
+    }
+    .entry-content { padding: 0 1.5rem 1.5rem; font-family: var(--ff-serif); font-size: 1rem; line-height: 1.8; }
+    .entry-footer { padding: 0.8rem 1.5rem; border-top: 1px solid var(--beige); display: flex; gap: 1rem; font-size: 0.72rem; color: var(--warm-gray); }
+    .sidebar-section { display: none; }
+    body.archive-template .sidebar-section,
+    body.label-template .sidebar-section {
+      display: block;
+      width: 320px;
+      flex-shrink: 0;
+    }
+    body.archive-template #main-content,
+    body.label-template #main-content { display: block; }
+    body.archive-template .container .site-content,
+    body.label-template .container .site-content {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      align-items: start;
+    }
+    .sidebar-section .widget { margin-bottom: 2.5rem; padding: 0; }
+    .sidebar-section .widget-title,
+    .sidebar-section h2 {
+      font-family: var(--ff-sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--beige);
+      margin-bottom: 1.2rem;
+      position: relative;
+    }
+    .sidebar-section .widget-title::after,
+    .sidebar-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .sidebar-section ul { display: flex; flex-direction: column; gap: 0.5rem; }
+    .sidebar-section ul li a {
+      font-size: 0.82rem;
+      color: var(--charcoal);
+      transition: color var(--transition-fast);
+      padding: 0.2rem 0;
+      display: block;
+    }
+    .sidebar-section ul li a:hover { color: var(--gold); }
+    @media (max-width: 1024px) {
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      :root { --gutter: 1.2rem; }
+      .topbar { display: none; }
+      .main-nav { display: none; }
+      .nav-toggle { display: flex; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero__sidebar { display: none; }
+      .site-content { grid-template-columns: 1fr; gap: 2rem; }
+      .sidebar { display: none; }
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .related-grid { grid-template-columns: 1fr; }
+      .newsletter-form { flex-direction: column; border: none; }
+      .newsletter-form input { border: 1px solid var(--charcoal); }
+      .newsletter-form button { border: 1px solid var(--charcoal); }
+      .header-inner { padding: 0.9rem var(--gutter); }
+      .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
+      .back-to-top { bottom: 1rem; right: 1rem; }
+      body.archive-template .sidebar-section,
+      body.label-template .sidebar-section { display: none; }
+    }
+    @media (max-width: 480px) {
+      .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero__feature-overlay h1 { font-size: 1.5rem; }
+    }
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <div aria-label="Site search" class="search-overlay" id="searchOverlay" role="dialog">
+    <button aria-label="Close search" class="search-close" id="searchClose">&#10005;</button>
+    <form action="/search" method="get" role="search">
+      <input aria-label="Search articles" autocomplete="off" id="searchInput" name="q" placeholder="Search Maison…" type="search"/>
+      <button aria-label="Submit search" type="submit">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7"/><line x1="16.5" x2="22" y1="16.5" y2="22"/></svg>
+      </button>
+    </form>
+  </div>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"/>
+
+  <nav aria-label="Mobile navigation" class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-close">
+      <button aria-label="Close menu" class="btn-icon" id="mobileNavClose">
+        <svg viewBox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+    <a class="mobile-nav-logo" href="/">MAISON</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/search/label/Fashion">Fashion</a></li>
+      <li><a href="/search/label/Beauty">Beauty</a></li>
+      <li><a href="/search/label/Lifestyle">Lifestyle</a></li>
+      <li><a href="/search/label/Culture">Culture</a></li>
+      <li><a href="/search/label/Travel">Travel</a></li>
+      <li><a href="/search/label/Wellness">Wellness</a></li>
+      <li><a href="/p/about.html">About</a></li>
+      <li><a href="/p/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="topbar" role="banner">
+    <div class="topbar__date" id="topbarDate"/>
+    <div class="topbar__social">
+      <a aria-label="Instagram" href="#" rel="noopener noreferrer" target="_blank">Instagram</a>
+      <a aria-label="Pinterest" href="#" rel="noopener noreferrer" target="_blank">Pinterest</a>
+      <a aria-label="Twitter" href="#" rel="noopener noreferrer" target="_blank">Twitter</a>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <button aria-expanded="false" aria-label="Open menu" class="nav-toggle" id="navToggle">
+          <span/><span/><span/>
+        </button>
+        <button aria-label="Open search" class="btn-icon" id="searchToggle">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7"/><line x1="16.5" x2="22" y1="16.5" y2="22"/></svg>
+        </button>
+      </div>
+
+      <div class="header-logo">
+        <a href="/">Maison Editorial<span class="logo-tagline">The Art of Living Well</span></a>
+      </div>
+
+      <div class="header-right">
+        <button aria-label="Toggle dark mode" class="btn-icon" id="darkModeToggle" title="Toggle dark mode">
+          <svg id="iconSun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" x2="12" y1="2" y2="5"/><line x1="12" x2="12" y1="19" y2="22"/><line x1="4.22" x2="6.34" y1="4.22" y2="6.34"/><line x1="17.66" x2="19.78" y1="17.66" y2="19.78"/><line x1="2" x2="5" y1="12" y2="12"/><line x1="19" x2="22" y1="12" y2="12"/><line x1="4.22" x2="6.34" y1="19.78" y2="17.66"/><line x1="17.66" x2="19.78" y1="6.34" y2="4.22"/></svg>
+          <svg id="iconMoon" style="display:none" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <a aria-label="RSS Feed" class="btn-icon" href="/feeds/posts/default" rel="alternate" type="application/rss+xml">
+          <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation" class="main-nav" role="navigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search/label/Fashion">Fashion</a>
+          <div class="mega-menu">
+            <a href="/search/label/Fashion">All Fashion</a>
+            <a href="/search/label/Street+Style">Street Style</a>
+            <a href="/search/label/Haute+Couture">Haute Couture</a>
+            <a href="/search/label/Accessories">Accessories</a>
+            <a href="/search/label/Menswear">Menswear</a>
+            <a href="/search/label/Sustainable+Fashion">Sustainable Fashion</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search/label/Beauty">Beauty</a>
+          <div class="mega-menu">
+            <a href="/search/label/Beauty">All Beauty</a>
+            <a href="/search/label/Skincare">Skincare</a>
+            <a href="/search/label/Makeup">Makeup</a>
+            <a href="/search/label/Haircare">Haircare</a>
+            <a href="/search/label/Fragrance">Fragrance</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search/label/Lifestyle">Lifestyle</a>
+          <div class="mega-menu">
+            <a href="/search/label/Lifestyle">All Lifestyle</a>
+            <a href="/search/label/Home+Decor">Home Decor</a>
+            <a href="/search/label/Food">Food &amp; Dining</a>
+            <a href="/search/label/Design">Design</a>
+            <a href="/search/label/Books">Books &amp; Art</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search/label/Culture">Culture</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search/label/Travel">Travel</a>
+          <div class="mega-menu">
+            <a href="/search/label/Travel">All Travel</a>
+            <a href="/search/label/Destinations">Destinations</a>
+            <a href="/search/label/Hotels">Hotels</a>
+            <a href="/search/label/City+Guides">City Guides</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search/label/Wellness">Wellness</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/p/about.html">About</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main" tabindex="-1">
+    <section aria-label="Featured stories" class="hero">
+      <article class="hero__feature">
+        <img alt="Kylie Jenner - Fashion editorial" height="900" loading="eager" src="https://i.pinimg.com/736x/d5/b9/f2/d5b9f2bc71d1109e1f78a8991ca6f559.jpg" title="Kylie Jenner" width="700"/>
+        <div class="hero__feature-overlay">
+          <span class="eyebrow">Editor&#39;s Pick &#183; Fashion</span>
+          <h1>Kylie Jenner &amp; Justin Bieber</h1>
+          <p>The ultimate style icons of our generation. From red carpet to street style, discover how these celebrities are redefining fashion.</p>
+          <a class="btn-read-more" href="/search/label/Fashion">Discover the Story</a>
+        </div>
+      </article>
+      <div class="hero__sidebar">
+        <article class="hero__secondary">
+          <img alt="Justin Bieber - Street Style" height="500" loading="eager" src="https://i.pinimg.com/1200x/43/9c/c6/439cc60c939419b7e38833637a42616b.jpg" title="Justin Bieber" width="400"/>
+          <div class="hero__secondary-overlay">
+            <span class="eyebrow" style="color:var(--gold-light);display:block;margin-bottom:0.5rem">Street Style</span>
+            <h2>Justin Bieber - The Art of Effortless Dressing</h2>
+          </div>
+        </article>
+        <article class="hero__secondary">
+          <img alt="Kendall Jenner - Beauty" height="500" loading="eager" src="https://i.pinimg.com/736x/ad/06/29/ad0629d545f9a6f7fbbaca9d1d4a52c6.jpg" title="Kendall Jenner" width="400"/>
+          <div class="hero__secondary-overlay">
+            <span class="eyebrow" style="color:var(--gold-light);display:block;margin-bottom:0.5rem">Beauty</span>
+            <h2>The Skincare Rituals Worth Waking Up For</h2>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="Browse categories" style="padding:3rem 0; background:var(--cream); border-bottom:1px solid var(--beige)">
+      <div class="container">
+        <div class="category-grid">
+          <a class="category-card" href="/search/label/Beauty">
+            <div class="category-card__img">
+              <img alt="Kylie Jenner - Beauty category" height="200" loading="lazy" src="https://i.pinimg.com/736x/d5/b9/f2/d5b9f2bc71d1109e1f78a8991ca6f559.jpg" title="Kylie Jenner" width="200"/>
+            </div>
+            <span class="category-card__label">Beauty</span>
+          </a>
+          <a class="category-card" href="/search/label/Lifestyle">
+            <div class="category-card__img">
+              <img alt="Justin Bieber - Lifestyle category" height="200" loading="lazy" src="https://i.pinimg.com/1200x/43/9c/c6/439cc60c939419b7e38833637a42616b.jpg" title="Justin Bieber" width="200"/>
+            </div>
+            <span class="category-card__label">Lifestyle</span>
+          </a>
+          <a class="category-card" href="/search/label/Travel">
+            <div class="category-card__img">
+              <img alt="Kendall Jenner - Travel category" height="200" loading="lazy" src="https://i.pinimg.com/736x/ad/06/29/ad0629d545f9a6f7fbbaca9d1d4a52c6.jpg" title="Kendall Jenner" width="200"/>
+            </div>
+            <span class="category-card__label">Travel</span>
+          </a>
+          <a class="category-card" href="/search/label/Wellness">
+            <div class="category-card__img">
+              <img alt="Hailey Bieber - Wellness category" height="200" loading="lazy" src="https://i.pinimg.com/736x/ed/1f/a3/ed1fa384707405e42c99fca3e39936e2.jpg" title="Hailey Bieber" width="200"/>
+            </div>
+            <span class="category-card__label">Wellness</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Latest articles" style="padding:3rem 0">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">From the Journal</span>
+          <span class="gold-rule"/>
+          <h2>Latest Stories</h2>
+          <p>Curated perspectives on fashion, culture, and the art of living beautifully</p>
+        </div>
+        <div class="grid-3" style="margin-top:2rem">
+          <article class="card" itemscope="" itemtype="https://schema.org/BlogPosting">
+            <div class="card__img">
+              <a href="/post1" tabindex="-1">
+                <img alt="Celebrity Style - Blog post" src="https://i.pinimg.com/736x/d5/b9/f2/d5b9f2bc71d1109e1f78a8991ca6f559.jpg" height="300" itemprop="image" loading="lazy" title="Celebrity Style" width="400"/>
+              </a>
+            </div>
+            <div class="card__body">
+              <span class="card__category"><a href="/search/label/Fashion">Fashion</a></span>
+              <h3 class="card__title" itemprop="headline"><a href="/post1">The Evolution of Street Style: From Subculture to Mainstream</a></h3>
+              <p class="card__excerpt" itemprop="description">Exploring how street style has transformed from underground subcultures to dominating the global fashion landscape...</p>
+              <div class="card__meta">
+                <time datetime="2026-01-15">January 15, 2026</time>
+                <span itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Editorial Team</span></span>
+              </div>
+            </div>
+          </article>
+          <article class="card" itemscope="" itemtype="https://schema.org/BlogPosting">
+            <div class="card__img">
+              <a href="/post2" tabindex="-1">
+                <img alt="Celebrity Style - Blog post" src="https://i.pinimg.com/1200x/43/9c/c6/439cc60c939419b7e38833637a42616b.jpg" height="300" itemprop="image" loading="lazy" title="Celebrity Style" width="400"/>
+              </a>
+            </div>
+            <div class="card__body">
+              <span class="card__category"><a href="/search/label/Beauty">Beauty</a></span>
+              <h3 class="card__title" itemprop="headline"><a href="/post2">Clean Beauty: The New Standard in Skincare</a></h3>
+              <p class="card__excerpt" itemprop="description">Why clean beauty is more than a trend — it's a movement toward transparency and sustainability in skincare...</p>
+              <div class="card__meta">
+                <time datetime="2026-01-12">January 12, 2026</time>
+                <span itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Editorial Team</span></span>
+              </div>
+            </div>
+          </article>
+          <article class="card" itemscope="" itemtype="https://schema.org/BlogPosting">
+            <div class="card__img">
+              <a href="/post3" tabindex="-1">
+                <img alt="Celebrity Style - Blog post" src="https://i.pinimg.com/736x/ad/06/29/ad0629d545f9a6f7fbbaca9d1d4a52c6.jpg" height="300" itemprop="image" loading="lazy" title="Celebrity Style" width="400"/>
+              </a>
+            </div>
+            <div class="card__body">
+              <span class="card__category"><a href="/search/label/Lifestyle">Lifestyle</a></span>
+              <h3 class="card__title" itemprop="headline"><a href="/post3">The Art of Slow Living in a Fast-Paced World</a></h3>
+              <p class="card__excerpt" itemprop="description">Embracing mindfulness, intentionality, and simplicity as a counterbalance to modern life's chaos...</p>
+              <div class="card__meta">
+                <time datetime="2026-01-10">January 10, 2026</time>
+                <span itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Editorial Team</span></span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="editorial-strip">
+      <blockquote>
+        &#8220;Fashion is not something that exists in dresses only. Fashion is in the sky, in the street; fashion has to do with ideas, the way we live, what is happening.&#8221;
+        <cite>The Maison Perspective</cite>
+      </blockquote>
+    </div>
+
+    <section aria-label="Visual gallery" style="padding:3rem 0 0">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Follow the Aesthetic</span>
+          <span class="gold-rule"/>
+          <h2>@MaisonEditorial</h2>
+          <p>Daily inspiration from our visual journal</p>
+        </div>
+      </div>
+      <div class="instagram-grid" style="margin-top:2rem">
+        <div class="instagram-item"><img alt="Kylie Jenner - Instagram" height="300" loading="lazy" src="https://i.pinimg.com/736x/87/1b/ec/871becc73fa38ed4f17be6e256e3452d.jpg" title="Kylie Jenner" width="300"/><div class="instagram-item__overlay">+</div></div>
+        <div class="instagram-item"><img alt="Justin Bieber - Instagram" height="300" loading="lazy" src="https://i.pinimg.com/736x/33/f4/f7/33f4f7222a0669f8415071accb16d5da.jpg" title="Justin Bieber" width="300"/><div class="instagram-item__overlay">+</div></div>
+        <div class="instagram-item"><img alt="Kendall Jenner - Instagram" height="300" loading="lazy" src="https://i.pinimg.com/1200x/96/d0/a7/96d0a7239a8b4850d54cff39b17a712c.jpg" title="Kendall Jenner" width="300"/><div class="instagram-item__overlay">+</div></div>
+        <div class="instagram-item"><img alt="Hailey Bieber - Instagram" height="300" loading="lazy" src="https://i.pinimg.com/1200x/ef/01/2f/ef012f8f7065a11ca349094331b1e945.jpg" title="Hailey Bieber" width="300"/><div class="instagram-item__overlay">+</div></div>
+        <div class="instagram-item"><img alt="Kylie Jenner - Instagram" height="300" loading="lazy" src="https://i.pinimg.com/736x/b6/92/56/b6925601fbfb5ad732455ce7153d1030.jpg" title="Kylie Jenner" width="300"/><div class="instagram-item__overlay">+</div></div>
+        <div class="instagram-item"><img alt="Justin Bieber - Instagram" height="300" loading="lazy" src="https://i.pinimg.com/1200x/59/61/1c/59611c01cb6f105794978ec50d67f8c9.jpg" title="Justin Bieber" width="300"/><div class="instagram-item__overlay">+</div></div>
+      </div>
+    </section>
+
+    <section aria-label="Newsletter signup" class="newsletter-section">
+      <span class="eyebrow">Join the Inner Circle</span>
+      <span class="gold-rule"/>
+      <h2>Beauty, Delivered Weekly</h2>
+      <p>Curated fashion discoveries, beauty secrets, and lifestyle inspiration in your inbox every Thursday.</p>
+      <form action="#" class="newsletter-form" method="post">
+        <input aria-label="Your email address" name="email" placeholder="Your email address" required="" type="email"/>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p style="font-size:0.68rem;color:var(--warm-gray);margin-top:1rem">No spam, ever. Unsubscribe anytime.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="footer-logo" href="/">MAISON</a>
+          <p>A luxury editorial destination for fashion, beauty, culture, and the art of living well. Published with intention for the discerning reader.</p>
+          <div class="footer-social">
+            <a aria-label="Instagram" href="#" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a aria-label="Pinterest" href="#" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.24-5.26 1.24-5.26s-.32-.63-.32-1.57c0-1.47.85-2.57 1.91-2.57.9 0 1.34.68 1.34 1.49 0 .91-.58 2.27-.88 3.53-.25 1.05.52 1.91 1.56 1.91 1.87 0 3.13-2.4 3.13-5.24 0-2.16-1.47-3.78-4.12-3.78-3 0-4.89 2.24-4.89 4.75 0 .86.25 1.47.64 1.94.18.21.2.3.14.54-.05.17-.15.59-.2.76-.06.25-.25.34-.46.25-1.31-.54-1.93-1.99-1.93-3.63 0-2.69 2.27-5.92 6.78-5.92 3.65 0 6.05 2.66 6.05 5.52 0 3.79-2.1 6.62-5.19 6.62-1.04 0-2.02-.56-2.36-1.2l-.65 2.6c-.23.89-.69 1.78-1.07 2.47.81.25 1.67.38 2.54.38 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            </a>
+            <a aria-label="Twitter" href="#" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+            <a aria-label="YouTube" href="#" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/search/label/Fashion">Fashion</a></li>
+            <li><a href="/search/label/Beauty">Beauty</a></li>
+            <li><a href="/search/label/Lifestyle">Lifestyle</a></li>
+            <li><a href="/search/label/Culture">Culture</a></li>
+            <li><a href="/search/label/Travel">Travel</a></li>
+            <li><a href="/search/label/Wellness">Wellness</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Maison</h4>
+          <ul>
+            <li><a href="/p/about.html">About Us</a></li>
+            <li><a href="/p/contact.html">Contact</a></li>
+            <li><a href="/p/advertise.html">Advertise</a></li>
+            <li><a href="/p/contributors.html">Contributors</a></li>
+            <li><a href="/feeds/posts/default" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/p/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/p/terms.html">Terms of Use</a></li>
+            <li><a href="/p/disclaimer.html">Disclaimer</a></li>
+            <li><a href="/p/cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08)">
+      <div class="container">
+        <div class="footer-bottom">
+          <span>&#169; <span id="footerYear">2026</span> Maison Editorial. All rights reserved.</span>
+          <span>Crafted with intention &#183; <a href="/">maisonmagazine.com</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button aria-label="Back to top" class="back-to-top" id="backToTop">
+    <svg viewBox="0 0 24 24"><polyline points="18,15 12,9 6,15"/></svg>
+  </button>
+
+  <script>
+    (function() {
+      'use strict';
+
+      var dmToggle = document.getElementById('darkModeToggle');
+      var iconSun = document.getElementById('iconSun');
+      var iconMoon = document.getElementById('iconMoon');
+      var html = document.documentElement;
+
+      function setTheme(dark) {
+        html.setAttribute('data-theme', dark ? 'dark' : 'light');
+        localStorage.setItem('maisonTheme', dark ? 'dark' : 'light');
+        if (iconSun && iconMoon) {
+          iconSun.style.display = dark ? 'none' : 'block';
+          iconMoon.style.display = dark ? 'block' : 'none';
+        }
+      }
+
+      var savedTheme = localStorage.getItem('maisonTheme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
+
+      if (dmToggle) {
+        dmToggle.addEventListener('click', function() {
+          var isDark = html.getAttribute('data-theme') === 'dark';
+          setTheme(!isDark);
+        });
+      }
+
+      var header = document.getElementById('siteHeader');
+      window.addEventListener('scroll', function() {
+        if (header) header.classList.toggle('scrolled', window.scrollY > 60);
+      }, { passive: true });
+
+      var btt = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (btt) btt.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+      if (btt) {
+        btt.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      var searchToggle = document.getElementById('searchToggle');
+      var searchOverlay = document.getElementById('searchOverlay');
+      var searchClose = document.getElementById('searchClose');
+      var searchInput = document.getElementById('searchInput');
+
+      function openSearch() {
+        if (searchOverlay) {
+          searchOverlay.classList.add('active');
+          if (searchInput) setTimeout(function() { searchInput.focus(); }, 100);
+          searchOverlay.setAttribute('aria-hidden', 'false');
+        }
+      }
+
+      function closeSearch() {
+        if (searchOverlay) {
+          searchOverlay.classList.remove('active');
+          searchOverlay.setAttribute('aria-hidden', 'true');
+        }
+      }
+
+      if (searchToggle) searchToggle.addEventListener('click', openSearch);
+      if (searchClose) searchClose.addEventListener('click', closeSearch);
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeSearch();
+      });
+
+      var navToggle = document.getElementById('navToggle');
+      var mobileNav = document.getElementById('mobileNav');
+      var mobileNavOverlay = document.getElementById('mobileNavOverlay');
+      var mobileNavClose = document.getElementById('mobileNavClose');
+
+      function openMobileNav() {
+        if (mobileNav) mobileNav.classList.add('open');
+        if (mobileNavOverlay) mobileNavOverlay.classList.add('open');
+        if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileNav() {
+        if (mobileNav) mobileNav.classList.remove('open');
+        if (mobileNavOverlay) mobileNavOverlay.classList.remove('open');
+        if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      if (navToggle) navToggle.addEventListener('click', openMobileNav);
+      if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
+      if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileNav);
+
+      var dateEl = document.getElementById('topbarDate');
+      if (dateEl) {
+        var now = new Date();
+        var opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateEl.textContent = now.toLocaleDateString('en-US', opts);
+      }
+
+      var yearEl = document.getElementById('footerYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      if ('IntersectionObserver' in window) {
+        var imgs = document.querySelectorAll('img[loading="lazy"]');
+        var io = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              io.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '200px' });
+        imgs.forEach(function(img) { io.observe(img); });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var animEls = document.querySelectorAll('.card, .section-head, .instagram-item');
+        var aio = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-in');
+              aio.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        animEls.forEach(function(el) { aio.observe(el); });
+      }
+
+    })();
+  </script>
+</body>
+</html>
